@@ -80,3 +80,42 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
+
+let arrImgModals = [
+  { name: "PLC", img: "plc.png" },
+  { name: "SCADA", img: "scada.jpg" },
+  { name: "HMI", img: "hmi.png" },
+];
+
+//modal
+let modal = document.querySelector(".modal-c1");
+let modalTitle = document.querySelector(".modal-c1-title");
+let modalContentImg = document.querySelector(".modal-c1-img");
+
+//modal overlay
+let modalOverlay = document.querySelector(".overlay-c1");
+
+//open modal btns
+let arrImgModalBtns = document.querySelectorAll(".openImgModel");
+
+for (let i = 0; i < arrImgModalBtns.length; i++) {
+  arrImgModalBtns[i].addEventListener("click", () => {
+    for (let k = 0; k < arrImgModals.length; k++) {
+      if (arrImgModals[k].name == arrImgModalBtns[i].innerText) {
+        modalTitle.innerText = arrImgModals[k].name;
+        modalContentImg.style.backgroundImage =
+          "url(./assets/img/" + arrImgModals[k].img + ")";
+
+        modal.style.display = "block";
+        modalOverlay.style.display = "block";
+      }
+    }
+  });
+}
+
+//modal close btn
+let modalClose = document.querySelector(".closeModalC1");
+modalClose.addEventListener("click", () => {
+  modal.style.display = "none";
+  modalOverlay.style.display = "none";
+});

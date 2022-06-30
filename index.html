@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./util/animate/css/animate.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <title>Presentazione PCTO | Pal Arvind</title>
   </head>
   <body>
@@ -29,6 +29,14 @@
         </div>
       </div>
       <div class="section">
+        <div class="overlay-c1"></div>
+        <div class="modal-c1">
+          <div class="modal-c1-title">Title</div>
+          <div class="modal-c1-content">
+            <div class="modal-c1-img"></div>
+          </div>
+          <input class="closeModalC1" type="button" value="chiudi" />
+        </div>
         <div class="content">
           <div class="c2-1">
             <p class="semiTitle">La mia prima azienda...</p>
@@ -43,9 +51,18 @@
                   </li>
                   <li>Settore: Elettronica ed Elettrotecnica</li>
                   <li>
-                    i campi d'attività:<br />1) programmazione PLC<br />2)
-                    Sviluppo Software PC: SCADA<br />3) Sviluppo ed
-                    installazione HMI
+                    i campi d'attività:<br />
+                    <div style="margin-bottom: 15px">
+                      1) programmazione <b class="openImgModel"> PLC </b>
+                    </div>
+                    <div style="margin-bottom: 15px">
+                      2) Sviluppo Software PC:
+                      <b class="openImgModel"> SCADA </b>
+                    </div>
+                    <div>
+                      3) Sviluppo ed installazione
+                      <b class="openImgModel"> HMI </b>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -159,6 +176,7 @@
       type="text/javascript"
       src="./util/fullPage/js/fullpage.min.js"
     ></script>
+    <script src="./util/sweetAlert/script.js"></script>
     <script type="text/javascript" src="./index.js"></script>
   </body>
 </html>
